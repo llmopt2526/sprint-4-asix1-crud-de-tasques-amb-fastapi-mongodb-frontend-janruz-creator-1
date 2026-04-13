@@ -103,3 +103,6 @@ class StudentModel(BaseModel):
     )
 ```
 Commit 05/04/2026
+Commit 13/04/2026
+
+Estic introduint el GET{id} restant i les proves amb POSTMAN.
