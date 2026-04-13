@@ -1,9 +1,67 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Pel·lícules - Sprint 4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <section class="header">
+            <h2 class="title">Cinemes Tarragona</h2>
+            <p>Gestió de pel·lícules amb FastAPI i MongoDB</p>
+        </section>
+
+        <hr>
+
+        <form id="movie-form">
+            <div class="row">
+                <div class="six columns">
+                    <label for="titol">Títol</label>
+                    <input class="u-full-width" type="text" id="titol" placeholder="Ex: Inception" required>
+                    
+                    <label for="genere">Gènere</label>
+                    <input class="u-full-width" type="text" id="genere" placeholder="Ex: Sci-Fi" required>
+
+                    <label for="usuari">Usuari</label>
+                    <input class="u-full-width" type="text" id="usuari" placeholder="El teu nom" required>
+                </div>
+                <div class="six columns">
+                    <label for="estat">Estat</label>
+                    <select class="u-full-width" id="estat">
+                        <option value="pendent de veure">Pendent de veure</option>
+                        <option value="vista">Vista</option>
+                    </select>
+
+                    <label for="puntuacio">Puntuació (1-10)</label>
+                    <input class="u-full-width" type="number" id="puntuacio" min="1" max="5" value="3" required>
+
+                    <label for="descripcio">Descripció</label>
+                    <textarea class="u-full-width" id="descripcio" placeholder="De què va la peli?" required></textarea>
+                </div>
+            </div>
+            <input class="button-primary u-full-width" type="submit" value="Afegir a la llista">
+        </form>
+
+        <hr>
+
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>Pel·lícula / Gènere</th>
+                    <th>Estat</th>
+                    <th>Puntuació</th>
+                    <th>Accions</th>
+                </tr>
+            </thead>
+            <tbody id="movie-list">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
 </html>
