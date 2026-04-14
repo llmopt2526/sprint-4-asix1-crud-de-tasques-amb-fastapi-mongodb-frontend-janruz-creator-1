@@ -3,6 +3,7 @@ from typing import Optional, List
 
 from fastapi import FastAPI, Body, HTTPException, status
 from fastapi.responses import Response
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import ConfigDict, BaseModel, Field
 from pydantic.functional_validators import BeforeValidator
 from typing_extensions import Annotated
@@ -20,6 +21,13 @@ app = FastAPI(
     summary="API REST amb FastAPI i MongoDB per gestionar informació de pel·lícules (Sprint 4)",
 )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # Permite que cualquier web se conecte
+    allow_credentials=True,
+    allow_methods=["*"], # Permite GET, POST, PUT, DELETE
+    allow_headers=["*"],
+)
 # ------------------------------------------------------------------------ #
 #                   Configuració de la connexió amb MongoDB               #
 # ------------------------------------------------------------------------ #
@@ -44,7 +52,7 @@ class MovieModel(BaseModel):
     titol: str = Field(...)
     descripcio: str = Field(...)
     estat: str = Field(..., description="Estat de la pel·lícula: 'pendent de veure' o 'vista'")
-    puntuacio: int = Field(..., ge=1, le=10)
+    puntuacio: int = Field(..., ge=1, le=5)
     genere: str = Field(...)
     usuari: str = Field(...)
 
@@ -56,7 +64,7 @@ class MovieModel(BaseModel):
                 "titol": "El Padrino",
                 "descripcio": "Història de la família criminal Corleone.",
                 "estat": "vista",
-                "puntuacio": 9,
+                "puntuacio": 5,
                 "genere": "Drama",
                 "usuari": "jan06"
             }
@@ -70,7 +78,7 @@ class UpdateMovieModel(BaseModel):
     titol: Optional[str] = None
     descripcio: Optional[str] = None
     estat: Optional[str] = None
-    puntuacio: Optional[int] = Field(None, ge=1, le=10)
+    puntuacio: Optional[int] = Field(None, ge=1, le=5)
     genere: Optional[str] = None
     usuari: Optional[str] = None
 
@@ -94,9 +102,24 @@ async def create_movie(movie: MovieModel = Body(...)):
 
 # --- READ (Llistar totes les pel·lícules) ---
 @app.get("/movies/", response_description="Llistar totes les pel·lícules", response_model=List[MovieModel])
-async def list_movies():
-    movies = await movie_collection.find().to_list(1000)
+async def list_movies(genere: Optional[str] = None):
+    # Si l'usuari passa un gènere, filtrem. Si no, busquem tot.
+    query = {}
+    if genere:
+        query["genere"] = genere
+        
+    movies = await movie_collection.find(query).to_list(1000)
     return movies
+
+@app.get("/movies/{id}", response_description="Obtenir una pel·lícula per ID")
+async def get_movie(id: str):
+    if not ObjectId.is_valid(id):
+        raise HTTPException(status_code=400, detail="El format de l'ID no és vàlid")
+    movie = await db["movies"].find_one({"_id": ObjectId(id)})
+    if movie is not None:
+        movie["_id"] = str(movie["_id"])
+        return movie
+    raise HTTPException(status_code=404, detail="Pel·lícula no trobada")
 
 # --- UPDATE (Actualitzar una pel·lícula) ---
 @app.put("/movies/{id}", response_description="Actualitzar una pel·lícula", response_model=MovieModel)

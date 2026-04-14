@@ -36,7 +36,7 @@
                         <option value="vista">Vista</option>
                     </select>
 
-                    <label for="puntuacio">Puntuació (1-10)</label>
+                    <label for="puntuacio">Puntuació (1-5)</label>
                     <input class="u-full-width" type="number" id="puntuacio" min="1" max="5" value="3" required>
 
                     <label for="descripcio">Descripció</label>
@@ -47,7 +47,15 @@
         </form>
 
         <hr>
-
+        <div class="row" style="margin-bottom: 20px; padding: 15px; background-color: #f8f8f8; border-radius: 5px;">
+           <h4>Buscar per ID</h4>
+           <div class="eight columns">
+             <input class="u-full-width" type="text" id="search-id-input" placeholder="Enganxa l'ID aquí (ex: 660c1a2b...)">
+        </div>
+        <div class="four columns">
+          <button class="button-primary u-full-width" onclick="fetchById()">Buscar</button>
+        </div>
+        </div>
         <table class="u-full-width">
             <thead>
                 <tr>
