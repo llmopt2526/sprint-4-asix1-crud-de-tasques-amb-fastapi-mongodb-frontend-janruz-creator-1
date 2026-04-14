@@ -104,5 +104,6 @@ class StudentModel(BaseModel):
 ```
 Commit 05/04/2026
 Commit 13/04/2026
+Commit 14/04/2026 
 
-Estic introduint el GET{id} restant i les proves amb POSTMAN.
+Introduïu el GET{ID} + CORS perquè no bloquegi la connexió del frontend amb el backend.
