@@ -31,7 +31,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/movies",
+					"raw": "http://127.0.0.1:8000/movies/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -41,7 +41,8 @@
 					],
 					"port": "8000",
 					"path": [
-						"movies"
+						"movies",
+						""
 					]
 				}
 			},
@@ -79,7 +80,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/movies",
+					"raw": "http://127.0.0.1:8000/movies/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -89,7 +90,8 @@
 					],
 					"port": "8000",
 					"path": [
-						"movies"
+						"movies",
+						""
 					]
 				}
 			},
@@ -161,6 +163,21 @@
 							"language": "json"
 						}
 					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/movies/{{last_id}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"{{last_id}}"
+					]
 				}
 			},
 			"response": []
