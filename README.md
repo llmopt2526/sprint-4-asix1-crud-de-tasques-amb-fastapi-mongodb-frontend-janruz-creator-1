@@ -111,3 +111,5 @@ Per fer funcionar aquestes proves, cal importar el .JSON a Postman i executar "R
 <img width="384" height="50" alt="image" src="https://github.com/user-attachments/assets/e8b4836e-3561-4525-b047-6d76027c0c13" />
 <img width="452" height="185" alt="image" src="https://github.com/user-attachments/assets/eb7b8853-a82e-46c6-b723-5488429826a1" />
 
+Videotutorial: 
+https://drive.google.com/file/d/1iovQrOeBO3_ZKfEeX2jw7fO57dXi-i0V/view?usp=sharing
