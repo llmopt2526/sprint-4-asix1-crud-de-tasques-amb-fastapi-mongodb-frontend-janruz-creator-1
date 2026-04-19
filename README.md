@@ -130,5 +130,7 @@ Per fer funcionar aquestes proves, cal importar el .JSON a Postman i executar "R
 <img width="452" height="185" alt="image" src="https://github.com/user-attachments/assets/eb7b8853-a82e-46c6-b723-5488429826a1" />
 
 Videotutorial per al Frontend (1) i Postman (2):
+
 https://drive.google.com/file/d/1nL92Uma5y9DxEUYi7vCusGbQXwbjPLxN/view?usp=sharing
+
 https://drive.google.com/file/d/1iovQrOeBO3_ZKfEeX2jw7fO57dXi-i0V/view?usp=sharing
