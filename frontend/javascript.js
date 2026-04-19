@@ -22,7 +22,7 @@ async function fetchMovies() {
                         <option value="vista" ${movie.estat === 'vista' ? 'selected' : ''}>Vista</option>
                     </select>
                 </td>
-                <td>${movie.puntuacio} / 10</td>
+                <td>${movie.puntuacio} / 5</td>
                 <td>
                     <button class="btn-delete" onclick="deleteMovie('${id}')">Eliminar</button>
                 </td>
