@@ -35,6 +35,10 @@ Primer tenim l'index.html que és l'esquelet visual de la web. Conté tota l'est
 
 <img width="748" height="384" alt="image" src="https://github.com/user-attachments/assets/1f74f0c4-b5a2-4102-a519-b6a93aaa67db" />
 
+<img width="1106" height="556" alt="image" src="https://github.com/user-attachments/assets/84b12b78-2549-48b4-94c6-4e6499a25d40" />
+
+<img width="1079" height="302" alt="image" src="https://github.com/user-attachments/assets/59b86049-42a5-47c2-a606-9d25ff788fad" />
+
 Després styles.css és el dels estils i colors. S'encarrega dels retocs visuals personalitzats que el framework Skeleton no cobreix, com els marges personalitzats de la pàgina, la lletra petita per a les descripcions o el color vermell d'alerta per al botó d'eliminar.
 
 <img width="448" height="262" alt="image" src="https://github.com/user-attachments/assets/95669781-202e-41b8-9bab-695aab7f5f41" />
