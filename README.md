@@ -35,10 +35,6 @@ Primer tenim l'index.html que és l'esquelet visual de la web. Conté tota l'est
 
 <img width="748" height="384" alt="image" src="https://github.com/user-attachments/assets/1f74f0c4-b5a2-4102-a519-b6a93aaa67db" />
 
-<img width="1106" height="556" alt="image" src="https://github.com/user-attachments/assets/84b12b78-2549-48b4-94c6-4e6499a25d40" />
-
-<img width="1079" height="302" alt="image" src="https://github.com/user-attachments/assets/59b86049-42a5-47c2-a606-9d25ff788fad" />
-
 Després styles.css és el dels estils i colors. S'encarrega dels retocs visuals personalitzats que el framework Skeleton no cobreix, com els marges personalitzats de la pàgina, la lletra petita per a les descripcions o el color vermell d'alerta per al botó d'eliminar.
 
 <img width="448" height="262" alt="image" src="https://github.com/user-attachments/assets/95669781-202e-41b8-9bab-695aab7f5f41" />
@@ -95,6 +91,20 @@ A la pàgina ens sortirà les diferents modalitats del CRUD inclòs un GET per I
 <img width="1020" height="369" alt="image" src="https://github.com/user-attachments/assets/bdd37ba5-7a31-4b96-a248-f7aa6576c217" />
 
 <img width="1028" height="257" alt="image" src="https://github.com/user-attachments/assets/81b9501b-beaf-499c-8679-41326c438d50" />
+
+Una altra forma d'executar les funcionalitats del CRUD és fer-ho des del nostre propi frontend a través del fitxer HTML creat anteriorment, el quin es pot gestionar usant el fitxer index.html (obrint-lo):
+
+<img width="103" height="76" alt="image" src="https://github.com/user-attachments/assets/4c7a294a-1625-4515-8c3a-df7aa5ed1594" />
+
+<img width="1101" height="544" alt="image" src="https://github.com/user-attachments/assets/cddabd68-bb87-4ef1-927f-498d67c575cc" />
+
+<img width="1061" height="299" alt="image" src="https://github.com/user-attachments/assets/5352296b-fc81-4bb6-96f8-41c8f65b59b6" />
+
+Aquesta forma és força intuïtiva també, amb un menú per poder incloure els mateixos paràmetres d'una pel·lícula (puntuació, nom, descripció, etc.). A més d'això, també tenim un altre apartat per cercar una pel·lícula pel vostre ID per veure el seu estat. Un cop completat podem afegir-lo a la llista a "Afegir a la llista", i a sota ens apareixerà cada pel·lícula que s'afegeixi:
+
+<img width="1101" height="545" alt="image" src="https://github.com/user-attachments/assets/84cb5334-f2fd-4522-a804-7b517b1c8659" />
+
+<img width="1026" height="352" alt="image" src="https://github.com/user-attachments/assets/a5db3dc9-8596-49f7-a177-f226087918d3" />
 
 D'altra banda en l'àmbit de proves a part del Swagger, una manera més ordenada és fer-la des de Postman, el qual el JSON de la carpeta /tests/ és una exportació de la col·lecció creada + CRUD:
 
