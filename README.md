@@ -106,6 +106,10 @@ Aquesta forma és força intuïtiva també, amb un menú per poder incloure els 
 
 <img width="1071" height="370" alt="image" src="https://github.com/user-attachments/assets/f1642880-bf6e-4746-94d7-3899a31a3329" />
 
+En voler comprovar la seva existència a la base de dades, podem anar a MongoDB Atlas i comprovar-ho:
+
+<img width="1137" height="401" alt="image" src="https://github.com/user-attachments/assets/fb2999ed-f23e-4989-be07-541279ef323f" />
+
 D'altra banda en l'àmbit de proves a part del Swagger, una manera més ordenada és fer-la des de Postman, el qual el JSON de la carpeta /tests/ és una exportació de la col·lecció creada + CRUD:
 
 <img width="278" height="181" alt="image" src="https://github.com/user-attachments/assets/8dc56126-12bb-4bc5-8ccb-b7008eb93581" />
