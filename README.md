@@ -104,7 +104,7 @@ Aquesta forma és força intuïtiva també, amb un menú per poder incloure els 
 
 <img width="1101" height="545" alt="image" src="https://github.com/user-attachments/assets/84cb5334-f2fd-4522-a804-7b517b1c8659" />
 
-<img width="1026" height="352" alt="image" src="https://github.com/user-attachments/assets/a5db3dc9-8596-49f7-a177-f226087918d3" />
+<img width="1071" height="370" alt="image" src="https://github.com/user-attachments/assets/f1642880-bf6e-4746-94d7-3899a31a3329" />
 
 D'altra banda en l'àmbit de proves a part del Swagger, una manera més ordenada és fer-la des de Postman, el qual el JSON de la carpeta /tests/ és una exportació de la col·lecció creada + CRUD:
 
